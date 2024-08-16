@@ -1,12 +1,12 @@
 document.getElementById('taskForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Evita el envío del formulario
+    event.preventDefault();
 
     const taskInput = document.getElementById('taskInput');
     const taskText = taskInput.value.trim();
 
     if (taskText !== "") {
         addTask(taskText);
-        taskInput.value = ""; // Limpia el campo de entrada
+        taskInput.value = "";
         Swal.fire({
             icon: 'success',
             title: 'Tarea agregada',
